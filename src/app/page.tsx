@@ -2,6 +2,10 @@ import CalculatorForm from "@/components/dahej/calculator-form";
 import Leaderboard from "@/components/dahej/leaderboard";
 import SeoContent from "@/components/dahej/seo-content";
 import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
   Calculator,
@@ -9,6 +13,8 @@ import {
   Zap,
   Share2,
   TrendingUp,
+  Globe,
+  ArrowRight,
 } from "lucide-react";
 
 export default function Home() {
@@ -28,6 +34,32 @@ export default function Home() {
               <p className="text-[10px] text-muted-foreground leading-tight">
                 Satirical Social Awareness Tool
               </p>
+            </div>
+          </div>
+          {/* Nav Dropdown - Other Calculators */}
+          <div className="hidden md:flex items-center gap-2">
+            <div className="relative group">
+              <button className="flex items-center gap-1 px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-orange-50">
+                <Globe className="w-4 h-4" />
+                <span>Calculators</span>
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div className="absolute right-0 top-full mt-1 w-56 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="p-2">
+                  <a href="/lobola-calculator" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-orange-50 text-sm transition-colors">
+                    <span>🇿🇦</span><span>Lobola Calculator (SA)</span>
+                  </a>
+                  <a href="/caili-calculator" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-orange-50 text-sm transition-colors">
+                    <span>🇨🇳</span><span>Caili Calculator (China)</span>
+                  </a>
+                  <a href="/mahr-calculator" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-orange-50 text-sm transition-colors">
+                    <span>☪️</span><span>Mahr Calculator (Islamic)</span>
+                  </a>
+                  <a href="/bride-price-calculator" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-orange-50 text-sm transition-colors">
+                    <span>🌍</span><span>Bride Price Worldwide</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -138,6 +170,45 @@ export default function Home() {
                 <span>Advertisement</span>
               </div>
             </div>
+
+            {/* Try Our Other Calculators */}
+            <section className="py-12">
+              <div className="text-center mb-8">
+                <Badge variant="secondary" className="bg-orange-100 text-orange-700 text-xs font-medium mb-3">
+                  <Globe className="w-3 h-3 mr-1" />
+                  OUR CALCULATOR NETWORK
+                </Badge>
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  Try Our Other <span className="golden-text">Calculators</span>
+                </h2>
+                <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
+                  Explore bride price and dowry traditions around the world
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {[
+                  { title: "Lobola Calculator", subtitle: "South Africa, Zimbabwe", icon: "🇿🇦", href: "/lobola-calculator", gradient: "from-green-500 to-emerald-500" },
+                  { title: "Caili Calculator 彩礼", subtitle: "China, Taiwan", icon: "🇨🇳", href: "/caili-calculator", gradient: "from-red-500 to-rose-500" },
+                  { title: "Mahr Calculator", subtitle: "Islamic Countries", icon: "☪️", href: "/mahr-calculator", gradient: "from-amber-500 to-orange-500" },
+                  { title: "Bride Price Worldwide", subtitle: "90+ Countries Compared", icon: "🌍", href: "/bride-price-calculator", gradient: "from-orange-500 to-red-500" },
+                ].map((calc, idx) => (
+                  <a key={idx} href={calc.href} className="group block">
+                    <Card className="h-full border-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden">
+                      <div className={`bg-gradient-to-r ${calc.gradient} p-3 text-white text-center`} style={{ animationDelay: `${idx * 0.1}s` }}>
+                        <span className="text-3xl block mb-1">{calc.icon}</span>
+                        <h3 className="font-bold text-sm">{calc.title}</h3>
+                      </div>
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs text-muted-foreground mb-2">{calc.subtitle}</p>
+                        <span className="inline-flex items-center gap-1 text-orange-600 font-medium text-xs group-hover:gap-2 transition-all">
+                          Try it <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </a>
+                ))}
+              </div>
+            </section>
 
             {/* SEO Content */}
             <Separator className="mb-4" />

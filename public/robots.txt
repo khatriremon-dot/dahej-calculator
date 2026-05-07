@@ -5,3 +5,9 @@ Sitemap: https://www.calculatedahej.com/sitemap.xml
 
 # Crawl-delay for bots
 Crawl-delay: 1
+
+# Our calculator pages
+Allow: /lobola-calculator
+Allow: /caili-calculator
+Allow: /mahr-calculator
+Allow: /bride-price-calculator

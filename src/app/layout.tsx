@@ -217,6 +217,30 @@ export default function RootLayout({
                 {
                   "@type": "ListItem",
                   position: 5,
+                  name: "Lobola Calculator",
+                  item: "https://www.calculatedahej.com/lobola-calculator",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 6,
+                  name: "Caili Calculator",
+                  item: "https://www.calculatedahej.com/caili-calculator",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 7,
+                  name: "Mahr Calculator",
+                  item: "https://www.calculatedahej.com/mahr-calculator",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 8,
+                  name: "Bride Price Calculator Worldwide",
+                  item: "https://www.calculatedahej.com/bride-price-calculator",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 9,
                   name: "FAQ",
                   item: "https://www.calculatedahej.com/#faq",
                 },
