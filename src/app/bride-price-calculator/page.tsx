@@ -226,35 +226,35 @@ function calculateGlobalBridePrice(state: GlobalState): GlobalResult | null {
 const globalFaqs = [
   {
     question: "What is the difference between bride price and dowry?",
-    answer: "The key difference is the direction of payment: Bride price (lobola, caili, mahr) flows from the groom's family to the bride's family, while dowry (dahej, jahez) flows from the bride's family to the groom's family. Despite this difference, both practices can create financial burdens and have been linked to social problems. In modern discourse, both are often criticized when they become excessive, though some traditions like mahr in Islam are protected religious obligations that serve the bride's financial security.",
+    answer: "Bride price means the groom pays for the bride (she's a 'prized possession'), while dowry means the bride's family pays the groom (she's a 'financial burden'). Either way, a woman's value is being negotiated like a used car. One tradition says 'she's so valuable, you must pay,' and the other says 'she's so costly, we must pay you to take her.' Both are two sides of the same sexist coin.",
   },
   {
     question: "In which countries is bride price practiced?",
-    answer: "Bride price is practiced in over 90 countries worldwide. Major regions include: Sub-Saharan Africa (lobola in South Africa, roora in Zimbabwe, bride price in Kenya, Uganda, Nigeria, and many other nations); East Asia (caili in China, sin sod in Thailand, bigay-kaya in the Philippines); the Islamic world (mahr in all Muslim-majority countries); and parts of Oceania and the Pacific Islands. Each culture has unique traditions, amounts, and customs surrounding the practice.",
+    answer: "Over 90 countries — that's nearly half the world. From South African lobola (cattle-based, very on-the-nose) to Chinese caili (cash by armored truck in extreme cases), from Islamic mahr (gold and silver calculations) to Kenyan bride price (goats and sheep). It's almost impressive how humans have invented so many different ways to commodify marriage across every continent.",
   },
   {
     question: "How much does bride price cost in different countries?",
-    answer: "Bride price varies enormously: from as little as $100 in some African and Southeast Asian communities to over $1.9 million in extreme cases reported in China. South Africa lobola typically ranges from $3,000-$30,000, Chinese caili from $1,000-$300,000+, Indian dowry from $500-$60,000+, and Islamic mahr from $50 to unlimited amounts. The actual amount depends on education, income, family status, and regional customs.",
+    answer: "Anywhere from $100 in some communities to $1.9 million in one infamous Chinese case. That's a range of 19,000x. In South Africa, it's measured in cattle heads. In China, in cash equivalent to a small apartment. In the Middle East, in grams of gold. The unit of measurement changes but the underlying logic — that a woman has a market price — remains consistently alarming.",
   },
   {
     question: "Which country has the highest bride price?",
-    answer: "China holds the record for the highest documented bride prices, with extreme cases exceeding $1.9 million (delivered by armored truck in Jiangxi province). In normal circumstances, Chinese caili in tier-1 cities like Beijing and Shanghai can reach $50,000-$300,000. South Korea, Japan, and parts of the Middle East also have very high marriage costs, though these often include housing costs rather than pure bride price. Among African nations, South Africa and Nigeria tend to have the highest amounts.",
+    answer: "China takes the gold medal: one man in Jiangxi delivered $1.9 million by armored truck. To put that in perspective, that's more than most Americans' lifetime earnings, handed over in a single day, to one family, for one marriage. China's government has officially declared 'sky-high caili' a social evil. When the same government that built the Great Firewall calls your wedding tradition 'evil,' it might be time to reconsider.",
   },
   {
     question: "Is bride price legal worldwide?",
-    answer: "The legal status varies by country: (1) India: Dowry (bride's family to groom) is illegal under the 1961 Dowry Prohibition Act; (2) South Africa: Lobola is legal and culturally protected; (3) China: Caili is legal but government campaigns against excessive amounts; (4) Islamic countries: Mahr is a religious obligation under Sharia law; (5) Kenya/Uganda: Legal but some regulation debates; (6) Thailand/Philippines: Legal cultural practices. Many countries are actively debating regulation of excessive marriage payment practices.",
+    answer: "It's a legal patchwork: India banned dowry in 1961 (it's still rampant), South Africa protects lobola as 'cultural heritage,' China says caili is legal but please stop making it expensive, Islamic countries enforce mahr as religious law, and many African nations simply shrug. The global consensus appears to be: 'Yes, pricing a person for marriage is legally tolerated, but maybe don't go crazy with it.' Inspiring stuff.",
   },
   {
     question: "How are these calculators connected?",
-    answer: "Our calculator network includes four specialized tools: (1) Dahej Calculator for Indian dowry, (2) Lobola Calculator for South African bride price, (3) Caili Calculator (彩礼计算器) for Chinese bride price, and (4) Mahr Calculator for Islamic marriage gift. This global comparison page ties them all together, allowing users to understand how bride price and dowry practices compare across cultures. Each calculator follows the same design principles and provides culturally relevant estimates.",
+    answer: "We run a network of four satirical calculators — Dahej (India), Lobola (South Africa), Caili (China), and Mahr (Islamic) — plus this global comparison page. Each one is designed to show how different cultures have invented unique ways to turn marriage into a financial transaction. Together, they paint a picture of a global problem that transcends borders, religions, and 'traditions.'",
   },
   {
     question: "What is being done to address excessive bride prices globally?",
-    answer: "Multiple initiatives are underway: (1) China's government campaigns against 'sky-high caili' since 2021; (2) India's Dowry Prohibition Act and Section 498A protections; (3) South African debates about lobola regulation; (4) UN Women campaigns against harmful marriage practices; (5) NGOs promoting dowry-free marriages across South Asia; (6) Islamic scholars encouraging Mahr Fatimi as a balanced amount; (7) African women's rights groups advocating for reform. The global trend is toward moderation and cultural evolution.",
+    answer: "Not nearly enough, but here's the highlight reel: China runs anti-caili campaigns with names like 'Move Customs, Change Habits' (no, that's not a fitness app). India has had a law since 1961 that about as effective as a 'No Parking' sign in Delhi. South Africa 'debates' regulation while lobola inflation continues. The UN issues statements. NGOs promote dowry-free marriages. Progress is slow because, shockingly, people embedded in these traditions don't enjoy being told their wedding customs are problematic.",
   },
   {
     question: "Are these calculators accurate for actual negotiations?",
-    answer: "No, these calculators provide estimates for educational and informational purposes only. Actual bride price, dowry, caili, and mahr amounts are determined through complex family negotiations, cultural traditions, and personal circumstances that cannot be captured in a simple formula. Our tools are designed to raise awareness, educate about different cultural practices, and spark meaningful conversations. They should not be used as negotiation guides.",
+    answer: "Absolutely not, and that's entirely the point. If you're using a satirical website to determine how many cattle or grams of gold to offer for your future spouse, we humbly suggest you reconsider your entire approach to marriage. These tools exist to provoke thought and spark conversation, not to serve as negotiation aids. Love shouldn't require a spreadsheet.",
   },
 ];
 
@@ -327,7 +327,7 @@ export default function BridePriceCalculatorPage() {
         <div className="container mx-auto px-4 py-12 md:py-20 relative z-10 text-center">
           <Badge variant="secondary" className="bg-white/80 text-orange-700 text-xs font-medium mb-6 shadow-sm">
             <Zap className="w-3 h-3 mr-1" />
-            GLOBAL COMPARISON
+            SATIRICAL TOOL FOR SOCIAL AWARENESS
           </Badge>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
             Bride Price <span className="animate-rainbow">Worldwide</span>
@@ -590,10 +590,11 @@ export default function BridePriceCalculatorPage() {
                             <CopyButton text={`Bride price in ${result.country} (${result.term}): estimated $${result.low.toLocaleString()}-$${result.high.toLocaleString()}. Try the worldwide comparison at calculatedahej.com/bride-price-calculator`} />
                           </div>
                         </motion.div>
-                        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
-                          <p className="text-amber-800 text-xs leading-relaxed">
-                            <strong>Note:</strong> These are rough estimates for educational purposes. Actual amounts vary
-                            significantly based on family negotiations, regional customs, and individual circumstances.
+                        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-center">
+                          <p className="text-red-800 text-xs leading-relaxed">
+                            <strong>IMPORTANT DISCLAIMER:</strong> This calculator is <strong>purely satirical</strong> and intended to expose the global absurdity
+                            of putting a price tag on marriage. Whether it's called dowry, lobola, caili, or mahr — pricing a human being
+                            for marriage is a practice that belongs in history books, not wedding plans.
                           </p>
                         </div>
                       </CardContent>
@@ -654,8 +655,7 @@ export default function BridePriceCalculatorPage() {
                 </div>
               </div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                A comprehensive comparison of bride price and dowry traditions across 90+ countries.
-                Educational resource for understanding marriage payment practices worldwide.
+                A satirical tool created to raise awareness about the problematic nature of bride price practices.
               </p>
             </div>
             <div>
@@ -670,9 +670,8 @@ export default function BridePriceCalculatorPage() {
             <div>
               <h4 className="font-semibold mb-4 text-orange-400">Disclaimer</h4>
               <p className="text-sm text-gray-400 leading-relaxed">
-                All calculators are for educational purposes only. Actual bride price amounts
-                are determined through family negotiations and cultural traditions. These tools
-                do not constitute financial, legal, or cultural advice.
+                This calculator is <strong>purely satirical</strong> and does not promote or endorse the commodification of marriage.
+                All calculations are fictional. We advocate for relationships based on equality, not transactions.
               </p>
             </div>
           </div>

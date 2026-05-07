@@ -163,7 +163,7 @@ function calculateMahr(state: MahrState): MahrResult | null {
       silverGrams: parseFloat(silverGrams.toFixed(2)),
       goldGrams: parseFloat(goldGrams.toFixed(2)),
       dirhams,
-      verdict: `Your custom mahr of ${curr.symbol}${customAmt.toLocaleString()} is equivalent to ${goldGrams.toFixed(2)} grams of gold or ${silverGrams.toFixed(2)} grams of silver.`,
+      verdict: `You've set a custom mahr of ${curr.symbol}${customAmt.toLocaleString()}. Because nothing says 'spiritual union' quite like arguing over a dollar amount before signing the marriage contract.`,
       emoji: "✨",
     };
   }
@@ -187,15 +187,15 @@ function calculateMahr(state: MahrState): MahrResult | null {
 
   const verdicts: Record<string, { text: string; emoji: string }> = {
     fatimi: {
-      text: "Mahr Fatimi is the most recommended mahr in Islam, being the amount given by the Prophet (PBUH) to his beloved daughter Hazrat Fatima (RA). It represents a balanced and blessed amount.",
+      text: "Mahr Fatimi — the 'recommended' amount, because even the Prophet's daughter got a price tag on her marriage. At least this one comes with divine branding.",
       emoji: "🌙",
     },
     minimum: {
-      text: "The minimum mahr is 10 silver Dirhams (~30.6g silver), as established in Islamic law. While permissible, scholars encourage giving a reasonable amount that reflects the groom's means.",
+      text: "The absolute minimum: 10 silver Dirhams. At today's prices, that's roughly $26. Yes, the religiously mandated minimum price for a marriage is less than a decent dinner. Makes you wonder why anyone negotiates higher, doesn't it?",
       emoji: "📖",
     },
     azwaj: {
-      text: "Mahr al-Azwaj (500 Dirhams) represents the amount the Prophet Muhammad (PBUH) gave to his wives. It is considered a generous and Sunnah-compliant amount.",
+      text: "The amount the Prophet gave to his wives. So technically, if you're asking for more than what the Prophet himself paid, you might be overcharging. Just saying.",
       emoji: "⭐",
     },
   };
@@ -227,35 +227,35 @@ function formatCurrency(amount: number, symbol: string, currency: string): strin
 const mahrFaqs = [
   {
     question: "What is Mahr (Mehr) in Islam?",
-    answer: "Mahr (مهر) is a mandatory payment from the groom to the bride in Islamic marriages. It is an un conditional gift that becomes the bride's exclusive property upon marriage. Mahr serves as a financial security and a symbol of the groom's commitment. It is one of the essential elements of a valid Islamic marriage contract (nikah). Unlike dowry, which flows from the bride's family to the groom, mahr is the groom's obligation to the bride alone.",
+    answer: "Mahr is a mandatory payment from groom to bride in Islamic marriage, and it becomes the bride's exclusive property. While framed as 'financial security for the bride,' in practice it often becomes just another price tag on marriage — complete with family negotiations, gold-weight calculations, and the awkward conversation of 'how much is she worth?' before the wedding even starts.",
   },
   {
     question: "What is Mahr Fatimi?",
-    answer: "Mahr Fatimi is the mahr given by Prophet Muhammad (PBUH) to his daughter Hazrat Fatima (RA) upon her marriage to Hazrat Ali (RA). It is approximately 400 silver Dirhams, which equals about 1,470 grams of silver or 1,750 grams of gold (using historical conversion rates). Mahr Fatimi is widely considered the most recommended amount by Islamic scholars as it was practiced by the Prophet's own family and represents a balanced, blessed amount.",
+    answer: "The mahr given by Prophet Muhammad (PBUH) to his daughter Fatima (RA) — approximately 400 silver Dirhams or 1,470 grams of silver. It's considered the 'gold standard' of mahr (pun intended), though many families conveniently ignore this recommendation and demand amounts that would make the Prophet himself raise an eyebrow. Funny how 'following the Sunnah' is so selective.",
   },
   {
     question: "What is the minimum Mahr in Islam?",
-    answer: "According to Islamic law, the minimum mahr is 10 silver Dirhams, which is approximately 30.6 grams of silver. This was established by the Prophet Muhammad (PBUH). However, scholars encourage the groom to give an amount that is reasonable according to his financial capacity. There is no maximum limit for mahr — it can be as much as the couple agrees upon, though the Prophet (PBUH) discouraged setting excessively high amounts that create hardship.",
+    answer: "A mere 10 silver Dirhams — about $26 at current silver prices. So according to Islamic law, the minimum cost of entering a marriage is less than a pair of shoes. Yet somehow, families across the Muslim world manage to turn this into a five-figure negotiation involving gold bars, property deeds, and inter-family diplomatic summits. The gap between religious principle and cultural practice is truly spectacular.",
   },
   {
     question: "Can Mahr be paid later (deferred)?",
-    answer: "Yes, mahr can be split into two parts: Mahr Mu'ajjal (مهر معجل - prompt/advance) paid at the time of marriage, and Mahr Mu'akkhar (مهر مؤخر - deferred) paid at a later date, typically upon divorce or the husband's death. Many couples choose a combination of both, with a portion paid immediately and the remainder deferred. The deferred portion serves as important financial protection for the bride, especially in case of divorce or the husband's death.",
+    answer: "Yes! You can split it into 'pay now' (mahr mu'ajjal) and 'pay later' (mahr mu'akkhar). The deferred portion acts as a 'financial safety net' for the bride — which sounds progressive until you realize it's essentially treating marriage as a financial instrument with a callable debt. Modern marriage: now with exit clauses and deferred payment plans.",
   },
   {
     question: "What is the difference between Mahr and Dowry?",
-    answer: "Mahr and dowry are fundamentally different: (1) Direction: Mahr flows from groom to bride, while dowry flows from bride's family to groom's family. (2) Ownership: Mahr belongs exclusively to the bride, while dowry becomes the groom/family's property. (3) Nature: Mahr is a religious obligation in Islam, while dowry is a cultural practice. (4) Purpose: Mahr provides financial security to the bride, while dowry historically served different purposes across cultures. (5) Negotiation: Mahr is agreed upon by the couple, while dowry demands are often imposed by the groom's family.",
+    answer: "Mahr goes from groom to bride (she keeps it), while dowry goes from bride's family to groom's family (they keep it). In mahr, the woman is 'purchased' for her benefit; in dowry, the woman's family pays to 'offload' her. One direction makes her a prized asset; the other makes her a financial burden. Both involve treating marriage as a transaction centered on a woman's perceived value. The direction of the cash flow changes, but the underlying logic is equally questionable.",
   },
   {
     question: "How is Mahr calculated in gold and silver?",
-    answer: "Mahr is traditionally calculated based on the weight of silver Dirhams. Historically, 1 silver Dirham weighs approximately 3.07 grams. For Mahr Fatimi (400 Dirhams), this equals approximately 1,228 to 1,470 grams of silver depending on the historical standard used. The gold equivalent is calculated based on the silver-to-gold ratio, which historically was approximately 1:7. Some scholars use different ratios, so you may see slight variations in gold equivalent amounts.",
+    answer: "Using the ancient conversion rate of 1 Dirham ≈ 3.07 grams of silver. So Mahr Fatimi (400 Dirhams) ≈ 1,228-1,470g of silver. The gold equivalent uses a historical silver-to-gold ratio of ~1:7. In modern practice, families argue over current market rates of gold and silver — essentially turning a religious obligation into a commodities trading session. Wall Street would be proud.",
   },
   {
     question: "Is Mahr negotiable between the couple?",
-    answer: "Yes, mahr is absolutely negotiable. In fact, the bride (or her wali/guardian) has the right to set, negotiate, or waive the mahr. Islam encourages setting a reasonable amount based on the groom's financial capacity. Hazrat Ali (RA) once offered his shield as mahr to Hazrat Fatima (RA), showing that mahr can even be a symbolic item of value. The key principle is that both parties should agree willingly and without coercion.",
+    answer: "Absolutely! The bride (or her wali) can set, negotiate, or even waive the mahr entirely. Hazrat Ali reportedly offered his shield as mahr, proving that the Prophet's family kept it simple and symbolic. Today's families could learn from this, but instead, many turn it into an auction. The religion gives you the freedom to keep it modest; the culture insists on making it a spectacle.",
   },
   {
     question: "What happens to Mahr in case of divorce?",
-    answer: "If divorce occurs before the marriage is consummated, the wife is entitled to half of the mahr (unless she waives it). After consummation, she is entitled to the full mahr, whether it was paid promptly or deferred. If the mahr was deferred and divorce occurs, the wife can claim the deferred portion. If the husband dies, the deferred mahr becomes a debt owed by his estate and is paid before the inheritance is distributed. These rules are clearly established in the Quran (2:237) and Islamic jurisprudence.",
+    answer: "If divorced before consummation: half the mahr. After consummation: full mahr. If the husband dies: the deferred mahr is paid from his estate before inheritance. So mahr functions as a built-in divorce settlement — which raises the question: if marriage needs a pre-negotiated financial exit strategy encoded in religious law, maybe the whole 'transactional marriage' model deserves some rethinking?",
   },
 ];
 
@@ -371,7 +371,7 @@ export default function MahrCalculatorPage() {
         <div className="container mx-auto px-4 py-12 md:py-20 relative z-10 text-center">
           <Badge variant="secondary" className="bg-white/80 text-amber-700 text-xs font-medium mb-6 shadow-sm">
             <Zap className="w-3 h-3 mr-1" />
-            ISLAMIC MAHR CALCULATOR
+            SATIRICAL TOOL FOR SOCIAL AWARENESS
           </Badge>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
             Calculate <span className="animate-rainbow">Mahr</span> (Mehr)
@@ -609,10 +609,11 @@ export default function MahrCalculatorPage() {
                         </div>
                       </motion.div>
 
-                      <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-center">
-                        <p className="text-green-800 text-xs leading-relaxed">
-                          <strong>Note:</strong> This calculator provides estimates for educational purposes. Actual mahr should be agreed upon by the couple and their families.
-                          Consult with a qualified Islamic scholar for guidance on mahr amounts. Gold and silver prices are approximate and should be verified with current market rates.
+                      <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-center">
+                        <p className="text-red-800 text-xs leading-relaxed">
+                          <strong>IMPORTANT DISCLAIMER:</strong> This calculator is <strong>purely satirical</strong> and intended to highlight how the commodification of
+                          marriage — even when religiously sanctioned — can be taken to absurd extremes. We support marriages built on
+                          mutual respect and partnership, not precious metal calculations.
                         </p>
                       </div>
                     </CardContent>
@@ -711,8 +712,7 @@ export default function MahrCalculatorPage() {
                 </div>
               </div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                An educational tool to help understand Mahr (مهر) in Islamic marriages.
-                For informational purposes only. Please consult a qualified Islamic scholar for guidance.
+                A satirical tool created to raise awareness about the problematic nature of bride price practices.
               </p>
             </div>
             <div>
@@ -727,8 +727,8 @@ export default function MahrCalculatorPage() {
             <div>
               <h4 className="font-semibold mb-4 text-orange-400">Disclaimer</h4>
               <p className="text-sm text-gray-400 leading-relaxed">
-                This calculator provides estimates for educational purposes only. Mahr amounts should be
-                agreed upon by the couple and their families. Consult a qualified Islamic scholar for proper guidance.
+                This calculator is <strong>purely satirical</strong> and does not promote or endorse the commodification of marriage.
+                All calculations are fictional. We advocate for relationships based on equality, not transactions.
               </p>
             </div>
           </div>

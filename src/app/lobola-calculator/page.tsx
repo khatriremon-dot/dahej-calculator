@@ -139,25 +139,25 @@ function calculateLobola(state: LobolaState): LobolaResult | null {
 
   let verdict: string, emoji: string, rank: string;
   if (total < 50000) {
-    verdict = "A modest start to your family journey. The ancestors approve of your humility.";
-    emoji = "😊";
-    rank = "Respectful Suitor";
+    verdict = "Congratulations! You've put a 'modest' price tag on a human being. The ancestors are thrilled that love now comes with a receipt.";
+    emoji = "😱";
+    rank = "Bargain Hunter";
   } else if (total < 80000) {
-    verdict = "A fair and reasonable lobola. Both families will be pleased with this arrangement.";
-    emoji = "💪";
-    rank = "Fair Negotiator";
+    verdict = "Ah, the 'reasonable' range — because nothing says 'I love you' quite like a five-figure invoice handed to your in-laws.";
+    emoji = "😬";
+    rank = "Moderately Absurd";
   } else if (total < 120000) {
-    verdict = "This is a strong showing! The bride's family will know you mean serious business.";
-    emoji = "🎯";
-    rank = "Serious Negotiator";
+    verdict = "At this price, you could've bought a car instead. But sure, let's keep pretending that attaching a price to a person is totally normal.";
+    emoji = "🏎️";
+    rank = "Walking ATM";
   } else if (total < 200000) {
-    verdict = "Impressive commitment! You clearly value this union. The cattle will be plenty.";
-    emoji = "🐂";
-    rank = "Generous Groom";
+    verdict = "You're now in 'small house deposit' territory. Nothing screams romance like forcing a man to prove his love through financial devastation.";
+    emoji = "🏦";
+    rank = "Financially Ruined Groom";
   } else {
-    verdict = "The ancestors are impressed! You've shown extraordinary commitment to this family.";
-    emoji = "👑";
-    rank = "Royal Suitor";
+    verdict = "The ancestors are wheezing. At this price, you could've funded a university degree. But why invest in education when you can auction off a bride?";
+    emoji = "💀";
+    rank = "Peak Absurdity";
   }
 
   return {
@@ -178,35 +178,35 @@ function formatZAR(amount: number): string {
 const lobolaFaqs = [
   {
     question: "What is Lobola (Lobolo)?",
-    answer: "Lobola (also spelled lobolo or roora in Zimbabwe) is a traditional Southern African custom where the groom's family pays the bride's family in cattle or cash as a sign of respect, gratitude, and commitment. It is one of the oldest and most respected African marriage traditions, practiced across Zulu, Xhosa, Sotho, Tswana, and many other ethnic groups in South Africa, Zimbabwe, Zambia, and beyond. The practice symbolizes the union of two families rather than a simple transaction.",
+    answer: "Lobola is a Southern African tradition where a groom's family pays the bride's family — usually in cattle or cash — as a 'token of appreciation.' Because nothing says 'we value your daughter' quite like literally pricing her in livestock. While proponents call it 'uniting two families,' critics point out that it effectively treats women as commodities with a market value. How romantic.",
   },
   {
     question: "How is Lobola calculated?",
-    answer: "Traditionally, lobola is calculated in cattle heads. In Zulu culture, 11 cattle is a common traditional amount. Today, families negotiate an amount based on the bride's education, character, and family status. Cash equivalents are now widely used, with one cattle typically valued at around R7,000 to R10,000 depending on the region. Our calculator provides an estimated amount based on commonly considered factors like education, employment status, and region.",
+    answer: "Traditionally, lobola was calculated in cattle heads (typically 11 for Zulu families). Today, families negotiate based on the bride's education, character, and family status — because apparently a PhD makes you a more expensive human being. Our satirical calculator mimics this absurd pricing system to show how ridiculous it is to attach a monetary value to a person.",
   },
   {
     question: "How much does Lobola cost in South Africa?",
-    answer: "Lobola amounts vary widely based on the bride's background, family, and region. On average, lobola in South Africa ranges from R30,000 to R150,000 or more. In Gauteng and Western Cape, amounts tend to be higher due to the cost of living. Some families may request the equivalent of 8-15 cattle (R56,000 to R150,000). For highly educated brides from urban families, amounts can exceed R200,000. It's important to note that these are averages and actual amounts are always subject to family negotiation.",
+    answer: "Anywhere from R30,000 to R200,000+, which is coincidentally the price range of a decent car. In Gauteng, lobola amounts tend to be higher — presumably because Jozi women are 'premium' human beings. The fact that we can even discuss a 'going rate' for a person should tell you everything you need to know about why this practice needs critical reexamination.",
   },
   {
     question: "Can Lobola be paid in cash instead of cattle?",
-    answer: "Yes, in modern South Africa, lobola is commonly paid in cash as a cattle equivalent. While the traditional practice involves actual cattle, many urban families now prefer cash payments. The cash equivalent is typically calculated using the current market value of cattle, which ranges from R7,000 to R10,000 per head. Some families also accept a combination of cash and cattle. The method of payment is usually agreed upon during the negotiation process between the two families.",
+    answer: "Yes! Welcome to the modern era, where we've upgraded from literally trading cattle for humans to trading fiat currency for humans. Progress! One cattle is roughly R7,000-R10,000, so a 'standard' lobola of 11 cattle could set you back R77,000-R110,000. For that price, you could buy actual cattle and start a farm — or you could just, you know, treat your partner as an equal.",
   },
   {
     question: "What is the legal status of Lobola in South Africa?",
-    answer: "Lobola is legal and culturally protected in South Africa. It is recognized under South African customary law and is considered a valid part of the marriage process under the Recognition of Customary Marriages Act of 1998. However, the payment of lobola alone does not constitute a valid marriage — a customary marriage must still be registered with the Department of Home Affairs. There have been debates about regulating excessive lobola demands, but the practice remains a protected cultural tradition.",
+    answer: "Lobola is legally protected under the Recognition of Customary Marriages Act of 1998. So yes, it's perfectly legal to negotiate a price for a human being as long as you call it 'tradition.' The Constitutional Court has upheld this practice while encouraging 'reasonable negotiations' — which is like telling someone 'it's fine to haggle over a person, just don't be greedy about it.'",
   },
   {
     question: "What happens if the groom cannot afford the Lobola?",
-    answer: "In traditional culture, the groom's family is expected to negotiate in good faith. If the amount is too high, families often enter into extended negotiations or payment plans. Some families may reduce the amount if they can see the groom's genuine commitment. It's important to note that lobola should never be a barrier to a loving marriage. Many modern couples choose to agree on a symbolic amount that respects tradition without creating financial hardship.",
+    answer: "Ah, the classic catch-22: if you can't afford lobola, you can't get married. Families may enter 'extended negotiations' or 'payment plans' — because installment plans for a human being are totally not alarming. Some couples choose symbolic amounts, proving that the tradition can evolve when people use common sense. Imagine that.",
   },
   {
     question: "Is this Lobola calculator accurate?",
-    answer: "This calculator provides estimated amounts based on commonly considered factors in lobola negotiations. However, actual lobola amounts are determined through family-to-family negotiations and can vary significantly based on many cultural and personal factors. This tool is for informational and educational purposes only and should not be used as a definitive guide for actual lobola negotiations. Always consult with your family elders and cultural advisors.",
+    answer: "About as accurate as using a Ouija board to pick your life partner. This is a SATIRICAL tool designed to expose how absurd it is to calculate the 'price' of a human being based on their education, region, and employment status. If you're actually using this to negotiate lobola, we have some concerns.",
   },
   {
     question: "What is the difference between Lobola and Dowry?",
-    answer: "Lobola flows from the groom's family to the bride's family as a sign of respect and appreciation, while dowry (as practiced in South Asia) flows from the bride's family to the groom's family. Lobola is a recognition of the bride's value and the joining of two families, whereas dowry has been criticized for placing financial burden on the bride's family. In African culture, lobola is seen as a positive tradition that strengthens family bonds.",
+    answer: "Lobola flows from groom's family to bride's family (paying for the bride), while dowry flows from bride's family to groom's family (paying to get rid of the bride). Both traditions involve treating marriage as a financial transaction centered on the woman's 'value.' One direction makes the bride a purchased asset; the other makes her a financial burden. Neither is exactly a glowing endorsement of gender equality.",
   },
 ];
 
@@ -321,7 +321,7 @@ export default function LobolaCalculatorPage() {
         <div className="container mx-auto px-4 py-12 md:py-20 relative z-10 text-center">
           <Badge variant="secondary" className="bg-white/80 text-orange-700 text-xs font-medium mb-6 shadow-sm">
             <Zap className="w-3 h-3 mr-1" />
-            SOUTH AFRICAN BRIDE PRICE CALCULATOR
+            SATIRICAL TOOL FOR SOCIAL AWARENESS
           </Badge>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
             How Much <span className="animate-rainbow">Lobola</span>
@@ -625,11 +625,11 @@ export default function LobolaCalculatorPage() {
                       </motion.div>
 
                       {/* Disclaimer */}
-                      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
-                        <p className="text-amber-800 text-xs leading-relaxed">
-                          <strong>Note:</strong> This calculator provides estimates for educational and informational purposes only.
-                          Actual lobola is determined through family negotiations and varies widely. This tool does not replace
-                          traditional customs or family discussions. Lobola amounts are always subject to mutual agreement between families.
+                      <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-center">
+                        <p className="text-red-800 text-xs leading-relaxed">
+                          <strong>IMPORTANT DISCLAIMER:</strong> This calculator is <strong>purely satirical</strong> and intended to highlight the absurdity
+                          of treating marriage as a financial transaction. Lobola should never reduce a human being to a price tag.
+                          We support relationships built on mutual respect and equality, not cattle-head calculations.
                         </p>
                       </div>
                     </CardContent>
@@ -762,8 +762,7 @@ export default function LobolaCalculatorPage() {
                 </div>
               </div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                An educational tool to help understand the beautiful tradition of lobola in Southern African culture.
-                For informational purposes only.
+                A satirical tool created to raise awareness about the problematic nature of bride price practices.
               </p>
             </div>
             <div>
@@ -778,9 +777,8 @@ export default function LobolaCalculatorPage() {
             <div>
               <h4 className="font-semibold mb-4 text-orange-400">Disclaimer</h4>
               <p className="text-sm text-gray-400 leading-relaxed">
-                This calculator is for educational and informational purposes only. Actual lobola amounts
-                are determined through family negotiations and cultural traditions. This tool does not
-                constitute financial or legal advice.
+                This calculator is <strong>purely satirical</strong> and does not promote or endorse the commodification of marriage.
+                All calculations are fictional. We advocate for relationships based on equality, not transactions.
               </p>
             </div>
           </div>

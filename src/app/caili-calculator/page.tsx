@@ -154,25 +154,25 @@ function calculateCaili(state: CailiState): CailiResult | null {
 
   let verdict: string, emoji: string, rank: string;
   if (totalCNY < 50000) {
-    verdict = "In some areas, this is considered a symbolic caili. The focus is on love, not money.";
-    emoji = "😊";
-    rank = "Symbolic Match (象征性彩礼)";
+    verdict = "A 'symbolic' amount — which is Chinese for 'we still put a price on marriage, but we feel slightly less guilty about it.'";
+    emoji = "😅";
+    rank = "Barely Transactional";
   } else if (totalCNY < 100000) {
-    verdict = "A moderate amount that respects tradition without excessive burden. Common in many provinces.";
-    emoji = "💪";
-    rank = "Reasonable Amount (合理范围)";
+    verdict = "The 'reasonable' zone. Because paying six figures for love is totally reasonable if your mother-in-law says so.";
+    emoji = "😏";
+    rank = "Standard Extortion";
   } else if (totalCNY < 200000) {
-    verdict = "This is a typical amount in many Chinese provinces. Prepare for some serious saving!";
-    emoji = "🎯";
-    rank = "Standard Range (标准范围)";
+    verdict = "At this point, you're not getting married — you're making a down payment on a family's retirement fund. Congratulations?";
+    emoji = "🏦";
+    rank = "Human ATM Machine";
   } else if (totalCNY < 500000) {
-    verdict = "High-end territory! Common in tier-1 cities and provinces with strong caili traditions.";
-    emoji = "💰";
-    rank = "Premium Range (高端范围)";
+    verdict = "Welcome to 'sky-high caili' territory — the exact kind the government keeps telling people to stop demanding. But who listens to the government when there's face (面子) to maintain?";
+    emoji = "🚀";
+    rank = "Government-Disapproved Level";
   } else {
-    verdict = "Top tier! This level is seen in extreme cases reported in the news. The government has called for reductions.";
-    emoji = "👑";
-    rank = "Sky-High Level (天价彩礼)";
+    verdict = "The price of a small apartment, delivered in cash by armored truck. In some Jiangxi counties, this is considered 'normal.' That should terrify everyone.";
+    emoji = "💀";
+    rank = "Peak Caili Madness";
   }
 
   return {
@@ -199,35 +199,35 @@ function formatCNY(amount: number): string {
 const cailiFaqs = [
   {
     question: "What is Caili (彩礼)?",
-    answer: "Caili (彩礼) is the Chinese bride price tradition where the groom's family gives money or goods to the bride's family before or during the wedding. The practice has been part of Chinese culture for thousands of years and is deeply rooted in Confucian values of filial piety and family respect. In modern times, caili has become a significant social issue due to rapidly escalating amounts, particularly in rural areas where the gender imbalance created by the one-child policy has made finding a bride more competitive.",
+    answer: "Caili is the Chinese tradition where the groom's family pays the bride's family before marriage. Originally a modest token of gratitude, it has morphed into a full-blown price tag on love — especially in rural areas where 30 million 'extra' men are competing for brides. Nothing says 'I respect you' quite like negotiating a cash amount for your future spouse with her parents.",
   },
   {
     question: "How much is Caili in different provinces?",
-    answer: "Caili amounts vary dramatically by province. According to recent surveys, average caili ranges from ¥30,000 in Chongqing to ¥300,000 in Shanghai. Provinces like Jiangxi, Fujian, and Zhejiang are known for high caili, while Guangdong and Chongqing tend to have lower amounts. In rural areas of Jiangxi and Anhui, caili can consume several years of a family's income. The Chinese government has published guidelines urging families to keep caili below ¥100,000 in most regions.",
+    answer: "It ranges from ¥30,000 in Chongqing to a mind-boggling ¥300,000+ in Shanghai. Jiangxi province is so infamous for caili inflation that one man delivered $1.9 million by armored truck. At this point, some Chinese provinces have higher 'bride prices' than car prices. But sure, let's keep pretending this is about 'tradition' and not about commodifying women.",
   },
   {
     question: "Is Caili legal in China?",
-    answer: "Caili is not illegal in China, but the government has taken steps to curb excessive amounts. In 2024, the central government launched nationwide campaigns against 'sky-high caili' (天价彩礼), calling it a social evil that burdens young people. Several provinces have issued local regulations and guidelines suggesting maximum amounts. However, enforcement is challenging as caili remains deeply embedded in cultural traditions. Courts can intervene in disputes over unreasonable caili demands under civil law principles.",
+    answer: "Technically yes, but the government has been running campaigns against 'sky-high caili' (天价彩礼) since 2021 — essentially saying 'please stop charging so much for your daughters.' Multiple provinces have issued guidelines suggesting maximum amounts, which is the bureaucratic equivalent of a strongly worded letter. Enforcement is about as effective as asking a cat not to knock things off a table.",
   },
   {
     question: "Why has Caili become so expensive?",
-    answer: "Several factors have driven caili inflation: (1) Gender imbalance from the one-child policy, with an estimated 30 million more men than women of marriageable age; (2) Social comparison and 'face' culture (面子文化) where families compete to show status; (3) Economic development creating wealth disparities between families; (4) Real estate requirements where owning a house and car are often prerequisites; (5) Declining marriage rates making competition for brides more intense; (6) Commercialization of weddings turning marriage into a status display. The government has identified these factors and is working on multi-pronged solutions.",
+    answer: "Blame the one-child policy combined with a cultural preference for sons: China now has ~30 million more men than women of marriageable age. Add 'face culture' (面子文化) where families compete to show status, and you get a perfect storm of bride price inflation. Couples now need a house AND a car AND cash just to get married. Love? That's apparently included for free if you can afford the down payment.",
   },
   {
     question: "What is the difference between Caili and Dowry?",
-    answer: "Caili flows from the groom's family to the bride's family, while dowry (as practiced in India) flows from the bride's family to the groom's family. Caili is given as a sign of respect and gratitude to the bride's parents for raising her. In contrast, dowry has been criticized for placing financial burden on the bride's family. However, both practices can create financial pressure and have been linked to social problems when amounts become excessive.",
+    answer: "Caili flows from groom to bride's family, while dowry flows from bride's family to groom's family. In Caili, the bride's family profits; in dowry, the groom's family profits. Either way, the woman is the product being traded and both sides argue their version is 'the good one.' Both practices have been criticized for turning marriage into an economic transaction. Funny how that works.",
   },
   {
     question: "Is this Caili calculator accurate?",
-    answer: "This calculator provides estimates based on publicly reported average caili amounts by province and commonly considered factors. Actual caili amounts vary significantly based on family negotiations, local customs, and individual circumstances. This tool is for educational and informational purposes only and should not be used as a guide for actual caili negotiations. Always respect family traditions and local customs when discussing marriage arrangements.",
+    answer: "About as accurate as using fortune cookies to plan your financial future. This is a SATIRICAL tool that mimics the absurd calculation factors — province, education, employment, property ownership — to demonstrate how ridiculous it is to price a person. If you're using this for actual wedding planning, we gently suggest couples therapy instead.",
   },
   {
     question: "What is the Chinese government doing about excessive Caili?",
-    answer: "The Chinese government has launched multiple initiatives: (1) National campaigns against 'sky-high caili' since 2021; (2) Model marriage guidelines issued by the Ministry of Civil Affairs; (3) Local regulations in provinces like Hebei, Jiangxi, and Ganso setting suggested maximums; (4) Promotion of new marriage customs including group weddings and zero-caili marriages; (5) Legal support for brides to return excessive caili in case of divorce; (6) Education campaigns through media and community outreach. The goal is to reduce the financial burden while respecting cultural traditions.",
+    answer: "They've launched multiple campaigns with names like 'Move Customs, Change Habits' (移风易俗) — which sounds like a fitness app but is actually about stopping people from charging small fortunes for brides. Some provinces suggest maximums of ¥30,000-¥100,000, and they promote 'zero-caili' group weddings. The government has essentially become the nation's anti-greed marriage counselor.",
   },
   {
     question: "Does Caili need to be returned after divorce?",
-    answer: "Under Chinese law, there are specific rules about caili return after divorce. Generally, if the couple did not register the marriage, the caili must be returned in full. If they registered but did not live together, it must generally be returned. If the caili caused financial hardship for the payer, courts may order partial or full return. The Supreme People's Court has issued detailed judicial interpretations on this matter. These rules aim to prevent caili from becoming a tool for financial exploitation.",
+    answer: "Yes, under certain conditions — which means caili has essentially become a bridal security deposit. If the marriage doesn't 'work out,' you can demand a refund on your spouse. The Supreme People's Court has issued detailed rules on this, because apparently Chinese courts need to function as a customer service desk for failed marriage transactions. How romantic.",
   },
 ];
 
@@ -344,7 +344,7 @@ export default function CailiCalculatorPage() {
         <div className="container mx-auto px-4 py-12 md:py-20 relative z-10 text-center">
           <Badge variant="secondary" className="bg-white/80 text-red-700 text-xs font-medium mb-6 shadow-sm">
             <Zap className="w-3 h-3 mr-1" />
-            CHINESE BRIDE PRICE CALCULATOR
+            SATIRICAL TOOL FOR SOCIAL AWARENESS
           </Badge>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
             <span className="animate-rainbow">彩礼</span> (Caili) Calculator
@@ -650,11 +650,11 @@ export default function CailiCalculatorPage() {
                         </div>
                       </motion.div>
 
-                      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
-                        <p className="text-amber-800 text-xs leading-relaxed">
-                          <strong>Note:</strong> This calculator provides estimates for educational purposes only.
-                          Actual caili amounts are determined through family negotiations. The Chinese government
-                          encourages reasonable caili amounts and has launched campaigns against excessive demands.
+                      <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-center">
+                        <p className="text-red-800 text-xs leading-relaxed">
+                          <strong>IMPORTANT DISCLAIMER:</strong> This calculator is <strong>purely satirical</strong> and intended to highlight the absurdity
+                          of treating marriage as a financial transaction. The Chinese government itself has called 'sky-high caili' a social evil.
+                          No human being should come with a price tag.
                         </p>
                       </div>
                     </CardContent>
@@ -753,8 +753,7 @@ export default function CailiCalculatorPage() {
                 </div>
               </div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                An educational tool to understand caili (彩礼) traditions in Chinese culture.
-                For informational purposes only. 彩礼计算器仅供教育参考。
+                A satirical tool created to raise awareness about the problematic nature of bride price practices.
               </p>
             </div>
             <div>
@@ -769,8 +768,8 @@ export default function CailiCalculatorPage() {
             <div>
               <h4 className="font-semibold mb-4 text-orange-400">Disclaimer (声明)</h4>
               <p className="text-sm text-gray-400 leading-relaxed">
-                This calculator is for educational purposes only. Actual caili amounts are determined
-                through family negotiations. 本计算器仅供教育用途，实际彩礼金额由家庭协商确定。
+                This calculator is <strong>purely satirical</strong> and does not promote or endorse the commodification of marriage.
+                All calculations are fictional. We advocate for relationships based on equality, not transactions.
               </p>
             </div>
           </div>
